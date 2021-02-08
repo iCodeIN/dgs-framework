@@ -1,3 +1,16 @@
 spring:
   application:
     name: dgs-example
+
+#---
+#spring:
+#  profiles:
+#    active: laptop
+
+
+management:
+  metrics:
+    export:
+      simple:
+        enabled: true
+#debug: true

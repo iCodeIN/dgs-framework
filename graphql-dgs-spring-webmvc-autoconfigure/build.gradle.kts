@@ -25,5 +25,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework:spring-web")
 
+    compileOnly("io.micrometer:micrometer-core")
+    compileOnly("org.springframework.boot:spring-boot-actuator-autoconfigure")
+
     testImplementation("io.mockk:mockk:1.10.3-jdk8")
+    testImplementation("org.springframework.boot:spring-boot-actuator-autoconfigure")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

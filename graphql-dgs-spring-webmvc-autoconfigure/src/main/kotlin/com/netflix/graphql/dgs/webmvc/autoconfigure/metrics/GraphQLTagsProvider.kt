@@ -14,18 +14,15 @@
  * limitations under the License.
  */
 
-plugins {
-    kotlin("jvm")
-}
 
+package com.netflix.graphql.dgs.webmvc.autoconfigure.metrics
 
-dependencies {
-    implementation(project(":graphql-dgs-spring-boot-starter"))
-    implementation(project(":graphql-dgs-subscriptions-websockets-autoconfigure"))
+import graphql.ExecutionResult
+import graphql.execution.instrumentation.parameters.InstrumentationExecutionParameters
+import io.micrometer.core.instrument.Tag
 
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-actuator-autoconfigure")
-    implementation("io.micrometer:micrometer-core")
+@FunctionalInterface
+interface GraphQLTagsProvider {
 
-    implementation("io.projectreactor:reactor-core:3.4.0")
+	fun getTags(parameters: InstrumentationExecutionParameters , result: ExecutionResult , exception: Throwable ): Iterable<Tag>
 }
