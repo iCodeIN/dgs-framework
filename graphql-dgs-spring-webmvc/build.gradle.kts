@@ -24,7 +24,7 @@ dependencies {
     api(project(":graphql-dgs"))
 
     implementation(kotlin("reflect"))
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.10.+")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.springframework:spring-web")
 
     testImplementation("io.mockk:mockk:1.10.3-jdk8")

@@ -27,7 +27,7 @@ dependencies {
     implementation("org.springframework:spring-web")
     implementation("org.springframework.boot:spring-boot")
 
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.11.4")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("com.apollographql.federation:federation-graphql-java-support:${Versions.GRAPHQL_JAVA_FEDERATION}")
     implementation("org.springframework.security:spring-security-core")
 

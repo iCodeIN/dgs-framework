@@ -24,12 +24,13 @@ import org.springframework.boot.actuate.autoconfigure.metrics.export.simple.Simp
 import org.springframework.boot.autoconfigure.AutoConfigureAfter
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 /**
- * {@link EnableAutoConfiguration Auto-configuration} for instrumentation of Spring GraphQL
+ * [Auto-configuration][org.springframework.boot.autoconfigure.EnableAutoConfiguration] for instrumentation of Spring GraphQL
  * endpoints.
  */
 @Configuration(proxyBeanMethods = false)
@@ -40,6 +41,7 @@ import org.springframework.context.annotation.Configuration
 ])
 @ConditionalOnBean(MeterRegistry::class)
 @EnableConfigurationProperties(GraphQLMetricsProperties::class)
+@ConditionalOnProperty(prefix = "management.metrics.dgs-graphql", name = ["enabled"], havingValue = "true", matchIfMissing = true)
 open class GraphQLMetricsAutoConfiguration {
 
 	@Bean

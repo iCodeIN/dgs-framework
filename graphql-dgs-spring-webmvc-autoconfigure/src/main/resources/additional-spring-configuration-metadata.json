@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "management.metrics.dgs-graphql",
+      "type": "com.netflix.graphql.dgs.webmvc.autoconfigure.metrics.GraphQLMetricsProperties",
+      "sourceType": "com.netflix.graphql.dgs.webmvc.autoconfigure.metrics.GraphQLMetricsAutoConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "management.metrics.dgs-graphql.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Flag used to disable DGS' GraphQLMetricsAutoConfiguration, enabled by default."
+    }
+  ],
+  "hints": []
+}
