@@ -22,7 +22,7 @@ dependencies {
 
     api("io.projectreactor:reactor-core:3.4.+")
 
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.11.4")
     implementation("org.springframework:spring-web")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
 

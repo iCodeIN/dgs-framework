@@ -15,9 +15,14 @@
  */
 
 plugins {
+    application
     kotlin("jvm")
+    id("org.springframework.boot") version "2.4.2"
 }
 
+application {
+    mainClass.set("com.netflix.graphql.dgs.example.ExampleApp")
+}
 
 dependencies {
     implementation(project(":graphql-dgs-spring-boot-starter"))
